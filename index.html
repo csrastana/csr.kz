@@ -231,21 +231,17 @@ section{padding:6rem 2rem}.si{max-width:1240px;margin:0 auto}
 <div class="cii"><div class="cic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div><div><h4>Email</h4><p><a href="mailto:info@csr.kz">info@csr.kz</a></p></div></div>
 <div class="cii"><div class="cic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><h4 data-i18n="cpl">Телефон</h4><p><a href="tel:+77773049777">+7 777 304 97 77</a><br><a href="tel:+77054261077">+7 705 426 10 77</a></p></div></div>
 </div>
-<div data-fs-success style="display:none;padding:1rem;background:#e8f5e9;color:#2e7d32;border-radius:4px;margin-bottom:1rem" id="fs-success">Ваш запрос отправлен. Мы свяжемся с вами в ближайшее время.</div>
-<div data-fs-error style="display:none;padding:1rem;background:#fdecea;color:#c62828;border-radius:4px;margin-bottom:1rem" id="fs-error">Ошибка отправки. Попробуйте ещё раз.</div>
-<form id="contact-form" class="cf fade-in">
-<div class="fr"><div class="fg"><label data-i18n="fn">Имя</label><input type="text" name="name" data-fs-field></div><div class="fg"><label>Email</label><input type="email" name="email" required data-fs-field></div></div>
-<div class="fg"><label data-i18n="fo">Организация</label><input type="text" name="organization" data-fs-field></div>
-<div class="fg"><label data-i18n="fm">Описание проекта или вопроса</label><textarea name="message" data-fs-field></textarea></div>
-<button class="bn" type="submit" data-fs-submit-btn data-i18n="fs">Отправить запрос</button>
+<form action="https://formspree.io/f/xbdenkpo" method="POST" class="cf fade-in">
+<input type="hidden" name="_subject" value="Новый запрос с сайта csr.kz">
+<input type="hidden" name="_language" value="ru">
+<div class="fr">
+<div class="fg"><label data-i18n="fn">Имя</label><input type="text" name="name"></div>
+<div class="fg"><label>Email</label><input type="email" name="email" required></div>
+</div>
+<div class="fg"><label data-i18n="fo">Организация</label><input type="text" name="organization"></div>
+<div class="fg"><label data-i18n="fm">Описание проекта или вопроса</label><textarea name="message"></textarea></div>
+<button class="bn" type="submit" data-i18n="fs">Отправить запрос</button>
 </form>
-<script src="https://unpkg.com/@formspree/ajax@1"></script>
-<script>
-  window.addEventListener('load', function() {
-    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-    formspree('initForm', { formElement: '#contact-form', formId: 'xbdenkpo' });
-  });
-</script>
 </div></div></section>
 
 <footer class="sfoot"><div class="fi"><p>&copy; 2015–2026 ЦСИ / CSR · <span data-i18n="ftn">Центр стратегических исследований</span> · Астана</p><div class="fl"><a href="#about" data-i18n="na">О центре</a><a href="#directions" data-i18n="nd">Деятельность</a><a href="#analytics" data-i18n="nan">Аналитика</a><a href="#news" data-i18n="nne">Новости</a><a href="#contact" data-i18n="nc">Контакты</a></div></div></footer>
