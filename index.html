@@ -239,11 +239,13 @@ section{padding:6rem 2rem}.si{max-width:1240px;margin:0 auto}
 <div class="fg"><label data-i18n="fm">Описание проекта или вопроса</label><textarea name="message" data-fs-field></textarea></div>
 <button class="bn" type="submit" data-fs-submit-btn data-i18n="fs">Отправить запрос</button>
 </form>
+<script src="https://unpkg.com/@formspree/ajax@1"></script>
 <script>
-  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-  formspree('initForm', { formElement: '#contact-form', formId: 'xbdenkpo' });
+  window.addEventListener('load', function() {
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#contact-form', formId: 'xbdenkpo' });
+  });
 </script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </div></div></section>
 
 <footer class="sfoot"><div class="fi"><p>&copy; 2015–2026 ЦСИ / CSR · <span data-i18n="ftn">Центр стратегических исследований</span> · Астана</p><div class="fl"><a href="#about" data-i18n="na">О центре</a><a href="#directions" data-i18n="nd">Деятельность</a><a href="#analytics" data-i18n="nan">Аналитика</a><a href="#news" data-i18n="nne">Новости</a><a href="#contact" data-i18n="nc">Контакты</a></div></div></footer>
